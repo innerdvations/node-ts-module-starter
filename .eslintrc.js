@@ -1,7 +1,7 @@
 module.exports = {
   overrides: [
     {
-      files: ['tests/**/*.ts', '**/*.spec.ts', '**/*.spec.tsx'],
+      files: ['tests/**/*.ts', 'tests/**/*.tsx'],
       env: {
         mocha: true,
       },
@@ -13,9 +13,6 @@ module.exports = {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
       },
     },
-    react: {
-      version: 'latest',
-    },
   },
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint'],
@@ -23,7 +20,7 @@ module.exports = {
     browser: false,
     es2021: true,
   },
-  extends: ['airbnb'],
+  extends: ['airbnb/base'],
   // parserOptions: {
   //   ecmaVersion: 12,
   //   sourceType: 'module',
