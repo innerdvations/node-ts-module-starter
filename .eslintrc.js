@@ -13,6 +13,9 @@ module.exports = {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
       },
     },
+    react: {
+      version: 'latest',
+    },
   },
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint'],
