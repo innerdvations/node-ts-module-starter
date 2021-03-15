@@ -4,7 +4,7 @@ module.exports = {
     es2021: true,
   },
   extends: ['airbnb/base'],
-  ignorePatterns: ['**/dist/*.js', '.git', 'node_modules'],
+  ignorePatterns: ['**/dist/*.js', '**/.git', '**/node_modules'],
   overrides: [{
     env: {
       mocha: true,
