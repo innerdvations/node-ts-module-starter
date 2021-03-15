@@ -4,12 +4,15 @@ module.exports = {
     es2021: true,
   },
   extends: ['airbnb/base'],
-  ignorePatterns: ['**/dist/*.js'],
+  ignorePatterns: ['**/dist/*.js', '.git', 'node_modules'],
   overrides: [{
     env: {
       mocha: true,
     },
-    files: ['tests/**/*.ts', 'tests/**/*.tsx'],
+    rules: {
+      'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+    },
+    files: ['src/**/*.spec.ts', 'src/**/*.test.ts', 'tests/**/*.ts'],
   }],
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint'],
@@ -25,8 +28,7 @@ module.exports = {
       tsx: 'never',
     }],
     'linebreak-style': ['error', 'unix'],
-    'no-underscore-dangle': 'off', // better than the alternatives in this simple project
-
+    'no-underscore-dangle': 'off',
   },
   settings: {
     'import/resolver': {
